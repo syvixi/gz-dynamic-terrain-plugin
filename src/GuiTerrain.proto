@@ -1,0 +1,25 @@
+syntax = "proto3";
+package dynamic_terrain.preview;
+message PageInfo {
+  int32 x = 1; int32 y = 2; int32 z = 3;
+  uint32 index = 4;
+  string mesh_name = 5;
+  string texture_name = 6;
+  string submesh_name = 7;
+  uint32 texture_size = 8;
+  int32 imagery_zoom = 9;
+}
+message Manifest {
+  uint32 version = 1;
+  uint64 revision = 2;
+  string prefix = 3;
+  repeated PageInfo pages = 4;
+}
+message Page {
+  PageInfo info = 1;
+  repeated double vertices = 2;
+  repeated double normals = 3;
+  repeated double uvs = 4;
+  repeated uint32 indices = 5;
+  bytes png = 6;
+}

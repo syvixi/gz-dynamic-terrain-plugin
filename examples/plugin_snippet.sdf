@@ -1,0 +1,72 @@
+<plugin filename="libgz-dynamic-terrain-system.so" name="custom::DynamicTerrainConfig">
+  <imagery_provider>google_satellite</imagery_provider>
+  <elevation_provider>terrarium</elevation_provider>
+  <elevation_max_zoom>15</elevation_max_zoom>
+
+  <visual_radius_m>7500</visual_radius_m>
+
+  <visual_geometry_zoom>14</visual_geometry_zoom>
+  <visual_elevation_zoom>13</visual_elevation_zoom>
+
+  <visual_mesh_cells_per_tile>64</visual_mesh_cells_per_tile>
+  <visual_max_mesh_cells>768</visual_max_mesh_cells>
+
+  <visual_page_texture_max_size>2048</visual_page_texture_max_size>
+  <visual_page_cache_mb>128</visual_page_cache_mb>
+
+  <visual_texture_guard_m>300</visual_texture_guard_m>
+
+  <visual_detail_mode>bottom_camera_only</visual_detail_mode>
+  <visual_detail_radius_m>1400</visual_detail_radius_m>
+  <visual_detail_zoom>17</visual_detail_zoom>
+
+  <visual_bootstrap_imagery_zoom>12</visual_bootstrap_imagery_zoom>
+  <visual_refine_texture>true</visual_refine_texture>
+  <visual_recenter_ready_zoom>14</visual_recenter_ready_zoom>
+  <visual_refine_max_source_tiles_per_batch>32</visual_refine_max_source_tiles_per_batch>
+  <visual_recenter_distance_m>1000</visual_recenter_distance_m>
+  <visual_warmup_frames>2</visual_warmup_frames>
+  <visual_frustum_eviction>true</visual_frustum_eviction>
+  <visual_offscreen_frames>30</visual_offscreen_frames>
+
+  <camera_names>camera_front,camera_down</camera_names>
+
+  <visual_lighting_enabled>false</visual_lighting_enabled>
+  <visual_cast_shadows>false</visual_cast_shadows>
+  <visual_receive_shadows>false</visual_receive_shadows>
+
+  <download_concurrency>4</download_concurrency>
+  <download_per_host>1</download_per_host>
+  <download_retries>3</download_retries>
+  <http_timeout_ms>5000</http_timeout_ms>
+  <retry_delay_sec>1.5</retry_delay_sec>
+
+  <decoded_dem_cache_mb>256</decoded_dem_cache_mb>
+
+  <dynamic_zoom>true</dynamic_zoom>
+  <min_zoom>12</min_zoom>
+  <max_zoom>18</max_zoom>
+
+  <zoom_table>80:18,180:17,400:16,900:15,1800:14,4000:13,1000000:12</zoom_table>
+
+  <radius_tiles>1</radius_tiles>
+
+  <heightmap_size>257</heightmap_size>
+
+  <enable_collision>true</enable_collision>
+  <collision_overlap_m>0.75</collision_overlap_m>
+  <collision_recenter_fraction>0.35</collision_recenter_fraction>
+
+  <align_origin_to_ground>true</align_origin_to_ground>
+  <z_offset_m>0.0</z_offset_m>
+
+  <startup_safety_ground>true</startup_safety_ground>
+  <startup_safety_size_m>800</startup_safety_size_m>
+  <startup_safety_thickness_m>0.20</startup_safety_thickness_m>
+  <startup_safety_top_z>0.0</startup_safety_top_z>
+  <startup_safety_remove_delay_sec>2.0</startup_safety_remove_delay_sec>
+
+  <update_period_sec>0.20</update_period_sec>
+  <diagnostics>true</diagnostics>
+  <status_period_sec>2.0</status_period_sec>
+</plugin>
